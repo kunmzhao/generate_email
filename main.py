@@ -28,8 +28,8 @@ prompt = PromptTemplate(input_variables=["tone", "dialect", "email"], template=t
 
 
 def load_llm():
-    llm = OpenAI(temperature=.5)
-    return llm
+    return OpenAI(temperature=.5, openai_api_base="https://api.chatanywhere.com.cn/v1",
+                  model_name="gpt-3.5-turbo")
 
 
 llm = load_llm()
